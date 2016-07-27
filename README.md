@@ -1,5 +1,6 @@
 # COLOPRESS
-> coming soon
+> Next Generation Colovely
+> Coming Soon
 
 # How to install
 First: [download Node.js](https://nodejs.org/en/download/ "donwload") or [install via package manager](https://nodejs.org/en/download/package-manager/)
