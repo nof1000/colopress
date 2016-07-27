@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nof1000/colopress/issues"
   },
-  "homepage": "http://colo.press/"
+  "homepage": "http://colo.press/",
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.1"
+  }
 }
