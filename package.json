@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A Simple Color, Palette and Gradient Generator.",
   "scripts": {
-    "start": "echo @todo",
-    "build": "echo @todo",
+    "start": "webpack-dev-server --progress --config config/webpack.dev.js",
+    "build": "npm run clean && webpack --progress --config config/webpack.release.js",
     "clean": "node ./config/clean.js"
   },
   "repository": {
