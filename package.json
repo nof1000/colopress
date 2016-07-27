@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Simple Color, Palette and Gradient Generator.",
   "scripts": {
-    "start": "",
-    "build": "",
-    "clean": ""
+    "start": "echo @todo",
+    "build": "echo @todo",
+    "clean": "node ./config/clean.js"
   },
   "repository": {
     "type": "git",
