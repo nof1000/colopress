@@ -49,7 +49,7 @@ module.exports = {
         postcss: [ precss ],
         autoprefixer: true,
         loaders: {
-            css: ExtractPlugin.extract('vue-style-loader', 'css')
+            css: ExtractPlugin.extract('css-loader?sourceMap')
         }
     },
     plugins: [

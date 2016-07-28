@@ -1,5 +1,5 @@
 /**
- * The Main Entry App Point
+ * Colopress
  *
  * @author Denis Maslennikov <mrdenniska@gmail.com> (http://nofach.com/)
  * @license MIT
