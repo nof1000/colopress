@@ -2,53 +2,66 @@
 <template>
   <div class="app">
     <header class="header">
-
+      <app-header></app-header>
     </header>
     <main role="main" class="content">
-
+      <app-content></app-content>
     </main>
     <footer class="footer">
-
+      <app-footer></app-footer>
     </footer>
   </div>
 </template>
 
 <!-- Javascript -->
 <script>
-export default {  }
+import AppHeader from './component/app/header';
+
+export default {
+  components: {
+    'app-header': AppHeader
+  }
+};
 </script>
 
 <!-- Stylesheet -->
 <style>
+  @import './stylesheet/colors';
+  @import './stylesheet/variables';
+
   * { padding: 0; margin: 0; line-height: 1; box-sizing: border-box; }
-  html, body { width: 100%; height: 100%; }
+
+  html, body {
+    width: 100%; height: 100%;
+    font: normal 20px/100% 'Roboto', sans-serif;
+  }
 
   .app {
     position: relative;
-    background: #212121;
-    width: 100%;
-    height: 100%;
-  }
+    background: $color-app;
+    width: 100%; height: 100%;
 
-  .app .header {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    left: 0; top: 0;
-  }
+    .header {
+      position: absolute;
+      display: flex;
+      width: 100%; height: 4rem;
+      left: 0; top: 0;
+      z-index: $layout-middle;
+    }
 
-  .app .content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+    .content {
+      position: relative;
+      width: 100%; height: 100%;
+      z-index: $layout-bottom;
+    }
 
-  .app .footer {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    left: 0; bottom: 0;
+    .footer {
+      position: absolute;
+      display: flex;
+      width: 100%; height: 4rem;
+      left: 0; bottom: 0;
+      z-index: $layout-middle;
+    }
+
   }
 </style>
