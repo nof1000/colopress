@@ -62,7 +62,7 @@ module.exports = {
             filename: 'vendor.bundle.js'
         }),
         new HTMLPlugin({
-            title: cfg.title,
+            title: cfg.name,
             template: 'index.html',
             filename: 'index.html',
             inject: true

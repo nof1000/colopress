@@ -36,9 +36,9 @@ export default {
   @import './stylesheet/basic';
 
   .app {
-    position: relative;
-    display: block;
     background: $color-app;
+    display: block;
+    position: relative;
     width: 100%; height: 100%;
 
     .content {
@@ -48,10 +48,10 @@ export default {
     }
 
     .footer {
-      position: absolute;
       display: flex;
-      width: 100%; height: 4rem;
       left: 0; bottom: 0;
+      position: absolute;
+      width: 100%; height: 4rem;
       z-index: $layout-middle;
     }
 
