@@ -1,6 +1,9 @@
 <!-- HTML -->
 <template>
   <a href="./">
+    <svg class="logo" viewBox="0 0 128 128">
+      <use xlink:href="/asset/image/icons.svg#logo"/>
+    </svg>
   </a>
   <nav>
     <ul>
