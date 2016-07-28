@@ -16,38 +16,30 @@
 <!-- Javascript -->
 <script>
 import AppHeader from './component/app/header';
+import AppContent from './component/app/content';
+import AppFooter from './component/app/footer';
 
 export default {
   components: {
-    'app-header': AppHeader
+    'app-header': AppHeader,
+    'app-content': AppContent,
+    'app-footer': AppFooter
   }
 };
 </script>
 
 <!-- Stylesheet -->
 <style>
-  @import './stylesheet/colors';
   @import './stylesheet/variables';
+  @import './stylesheet/colors';
 
-  * { padding: 0; margin: 0; line-height: 1; box-sizing: border-box; }
-
-  html, body {
-    width: 100%; height: 100%;
-    font: normal 20px/100% 'Roboto', sans-serif;
-  }
+  @import './stylesheet/basic';
 
   .app {
     position: relative;
+    display: block;
     background: $color-app;
     width: 100%; height: 100%;
-
-    .header {
-      position: absolute;
-      display: flex;
-      width: 100%; height: 4rem;
-      left: 0; top: 0;
-      z-index: $layout-middle;
-    }
 
     .content {
       position: relative;

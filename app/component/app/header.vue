@@ -5,7 +5,7 @@
   <nav>
     <ul>
       <li>
-        <svg class="button.gradient" viewBox="0 0 18 18">
+        <svg class="button gradient" viewBox="0 0 18 18">
           <linearGradient id="SVG_GRADIENT" x1="0" x2="18" y1="9" y2="9" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#febc15"/>
             <stop offset=".5" stop-color="#ee1c51"/>
@@ -18,7 +18,7 @@
         </svg>
       </li>
       <li>
-        <svg class="button.palette" viewBox="0 0 18 18">
+        <svg class="button palette" viewBox="0 0 18 18">
           <g>
             <rect fill="#e9f679" x="0" y="0" width="6.5" height="18"/>
             <rect fill="#9bdf46" x="6" y="0" width="6.5" height="18"/>
@@ -27,8 +27,8 @@
         </svg>
       </li>
       <li>
-        <svg class="button.color focus" viewBox="0 0 18 18">
-          <rect fill="#ffdd12" width="18" height="16"/>
+        <svg class="button color focus" viewBox="0 0 18 18">
+          <rect fill="#ffdd12" width="18" height="18"/>
         </svg>
       </li>
     </ul>
@@ -37,8 +37,46 @@
 
 <!-- Javascript -->
 <script>
+export default {}
 </script>
 
 <!-- Stylesheet -->
 <style>
+  @import '../../stylesheet/variables';
+
+  .app .header {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    left: 0; top: 0;
+    padding: 2rem 1rem;
+    position: absolute;
+    width: 100%; height: 4rem;
+    z-index: $layout-middle;
+
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+
+      li {
+        list-style: none;
+
+        .button {
+          background: transparent;
+          border-radius: 50%;
+          cursor: pointer;
+          display: inline-block;
+          margin-left: 1.25rem;
+          outline: none;
+          width: 1.25rem; height: 1.25rem;
+
+          filter: grayscale(1);
+
+          &:hover,
+          &.focus { filter: none; }
+        }
+      }
+    }
+  }
 </style>

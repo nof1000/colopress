@@ -12,7 +12,7 @@ const cfg = require('./config.js');
 module.exports = {
     context: cfg.dir.app,
     entry: {
-        vendor: [ 'vue' ],
+        vendor: [ 'normalize.css', 'vue' ],
         app: './app.js'
     },
     output: {
@@ -42,6 +42,10 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'vue-html'
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractPlugin.extract('style', 'css')
             }
         ]
     },
