@@ -26,9 +26,7 @@ module.exports = {
         fallback: [ cfg.dir.modules ],
         alias: { assets: cfg.dir.asset.image }
     },
-    resolveLoader: {
-        fallback: [ cfg.dir.modules ]
-    },
+    resolveLoader: { fallback: [ cfg.dir.modules ] },
     module: {
         loaders: [
             {
@@ -61,16 +59,8 @@ module.exports = {
     vue: {
         postcss: [ precss ],
         autoprefixer: true,
-        html: {
-            attrs: [
-                'img:src',
-                'link:href',
-                'use:xlink:href'
-            ]
-        },
-        loaders: {
-            css: ExtractPlugin.extract('css-loader?sourceMap')
-        }
+        html: { attrs: [ 'img:src', 'link:href', 'use:xlink:href' ] },
+        loaders: { css: ExtractPlugin.extract('css-loader?sourceMap') }
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
