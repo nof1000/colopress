@@ -9,6 +9,10 @@ module.exports = {
         modules: path.resolve(__dirname, '../node_modules'),
         build: path.resolve(__dirname, '../build'),
         root: path.resolve(__dirname, '../'),
-        app: path.resolve(__dirname, '../app')
+        app: path.resolve(__dirname, '../app'),
+
+        asset: {
+            image: path.resolve(__dirname, '../app/asset/image'),
+        }
     }
 };
