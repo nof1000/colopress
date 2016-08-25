@@ -40,20 +40,5 @@ export default {
     display: block;
     position: relative;
     width: 100%; height: 100%;
-
-    .content {
-      position: relative;
-      width: 100%; height: 100%;
-      z-index: $layout-bottom;
-    }
-
-    .footer {
-      display: flex;
-      left: 0; bottom: 0;
-      position: absolute;
-      width: 100%; height: 4rem;
-      z-index: $layout-middle;
-    }
-
   }
 </style>

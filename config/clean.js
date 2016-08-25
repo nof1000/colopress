@@ -21,5 +21,5 @@ function clean(dir) {
     }
 };
 
-try {clean(cfg.dir.build)} catch (e) {}
+try { clean(cfg.dir.build); } catch (e) {}
 console.log('all cleaned');

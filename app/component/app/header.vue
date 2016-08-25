@@ -1,7 +1,7 @@
 <!-- HTML -->
 <template>
-  <a href="./">
-    <svg class="logo" viewBox="0 0 128 128">
+  <a href="#">
+    <svg class="logo light" viewBox="0 0 128 128">
       <use xlink:href="../../asset/image/icons.svg#logo"/>
     </svg>
   </a>
@@ -46,9 +46,11 @@ export default {}
 <!-- Stylesheet -->
 <style>
   @import '../../stylesheet/variables';
+  @import '../../stylesheet/colors';
 
   .app .header {
     align-items: center;
+    background: transparent;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -57,6 +59,10 @@ export default {}
     position: absolute;
     width: 100%; height: 4rem;
     z-index: $layout-middle;
+
+    .logo { width: 2rem; height: 2rem; }
+    .logo.light { fill: $color-light; }
+    .logo.dark { fill: $color-dark; }
 
     ul {
       display: flex;
@@ -74,8 +80,11 @@ export default {}
           outline: none;
           width: 1.25rem; height: 1.25rem;
 
-          filter: grayscale(1);
+          &.color { box-shadow: 0 4pt 12pt rgba(255, 221, 18, 0.7); }
+          &.palette { box-shadow: 0 6pt 12pt rgba(155, 223, 70, 0.7); }
+          &.gradient { box-shadow: 0 6pt 12pt rgba(240, 46, 74, 0.7); }
 
+          filter: grayscale(1);
           &:hover,
           &.focus { filter: none; }
         }
